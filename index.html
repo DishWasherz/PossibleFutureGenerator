@@ -43,35 +43,67 @@
         </div>
         <a href="/" onClick="window.location.reload(); return false;">Une autre inno svp.</a>
         <footer>
-            <a href="https://github.com/steverobbins/bullshit-product-generator">Github</a> | Made by me | <a href="https://github.com/DishWasherz/">&copy; <span id="year">2019</span> </a>
+            <a href="https://dishwasherz.github.io/PossibleFutureGenerator/">Github</a> | Made by me | <a href="https://github.com/DishWasherz/">&copy; <span id="year">2019</span> </a>
           
         </footer>
         <script type="text/javascript">
             var bullshit = [
-                'acai berry',
-                'agave',
-                'almond',
+                'Escape Game',
+                'Appli',
+                'Cantine',
+                'Formation',
+                'École',
+                'Compléments alimentaires',
+                'Feuille de route RSE',
+                'Lieu',
+                'Produit alimentaire',
+                'Biscuit',
+                'Produits de beauté',
+                'Système de signalétique',
+                'Stand sur un événement',
+                'Startup',
+                'Outil',
                 
             ];
-     
+            // 
+            // var bullshitEnhancerChance = 25; // %
+            // var bullshitEnhancer = [
+            //     'essence',
+            //     'extract',
+            //     'infused',
+            //     'oil',
+            // ];
 
             var consumable = [
                 // things you drink
-                'beer',
-                'juice',
-
-                // things you use to make things you drink
-                'coffee beans',
-
-                // things you eat
-                'butter',
-              
-              
+                'digital',
+                'bio',
+                'recyclé',
+                'consigné',
+                'en vrac',
+                'au CBD',
+                'zero waste',
+                'sur les startups',
+                'à impact positif',
+                'à impact',
+                'décarboné',
+                'sur la blockchain',
+                'interne',
+                'de pilotage',
+                'sans fil',
+                'à pile',
+                'connecté',
+                              
             ];
 
+            var targeting = [
+                // things you drink
+                'digital',
+                'bio',
+            ];
             var product = bullshit[Math.floor(Math.random() * bullshit.length)];
             
-            product += ' ' + consumable[Math.floor(Math.random() * consumable.length)];
+            product += ' ' + consumable[Math.floor(Math.random() * consumable.length)] + ' ' + targeting[Math.floor(Math.random() * targeting.length)];
             document.getElementById('product').innerHTML = product.replace(/(?:^|\s)\S/g, function(a) { return a.toUpperCase(); });
             document.getElementById('beg').innerHTML = product.replace(/(?:^|\s)\S/g, function(a) { return a.toUpperCase(); });
 
