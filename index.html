@@ -43,7 +43,7 @@
         </div>
         <a href="/" onClick="window.location.reload(); return false;">Une autre inno svp.</a>
         <footer>
-            <a href="https://dishwasherz.github.io/PossibleFutureGenerator/">Github</a> | Made by me | <a href="https://github.com/DishWasherz/">&copy; <span id="year">2019</span> </a>
+            <a href="https://dishwasherz.github.io/PossibleFutureGenerator/">Github</a> | Made by us | <a href="https://github.com/DishWasherz/">&copy; <span id="year">2019</span> </a>
           
         </footer>
         <script type="text/javascript">
@@ -103,7 +103,8 @@
             
             product += ' ' + consumable[Math.floor(Math.random() * consumable.length)] ;
             product += ' ' + targeting[Math.floor(Math.random() * targeting.length)];
-           
+            document.getElementById('product').innerHTML = product.replace(/(?:^|\s)\S/g, function(a) { return a; });
+
             document.getElementById("year").innerHTML = new Date().getFullYear();
         </script>
     </body>
