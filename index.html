@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Possible Product Generator</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            body{
+                margin: 200px auto 40px;
+                max-width: 85%;
+                line-height:1.6;
+                font-size:18px;
+                color:#444;
+                padding: 0 10px;
+                text-align: center;
+            }
+
+            header {
+                text-align: center;
+                font-size: 1em;
+            }
+
+            #product {
+                font-size: 3em;
+                margin: 100px auto 70px;
+            }
+
+            a {
+                text-decoration: none;
+            }
+
+            footer {
+                margin-top: 100px;
+                font-size: .6em
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            Ta prochaine innovation positive est...
+        </header>
+        <div id="product">
+        </div>
+        <a href="/" onClick="window.location.reload(); return false;">Une autre inno svp.</a>
+        <footer>
+            <a href="https://github.com/steverobbins/bullshit-product-generator">Github</a> | Made by me | <a href="https://github.com/DishWasherz/">&copy; <span id="year">2019</span> </a>
+          
+        </footer>
+        <script type="text/javascript">
+            var bullshit = [
+                'acai berry',
+                'agave',
+                'almond',
+                
+            ];
+     
+
+            var consumable = [
+                // things you drink
+                'beer',
+                'juice',
+
+                // things you use to make things you drink
+                'coffee beans',
+
+                // things you eat
+                'butter',
+              
+              
+            ];
+
+            var product = bullshit[Math.floor(Math.random() * bullshit.length)];
+            
+            product += ' ' + consumable[Math.floor(Math.random() * consumable.length)];
+            document.getElementById('product').innerHTML = product.replace(/(?:^|\s)\S/g, function(a) { return a.toUpperCase(); });
+            document.getElementById('beg').innerHTML = product.replace(/(?:^|\s)\S/g, function(a) { return a.toUpperCase(); });
+
+            document.getElementById("year").innerHTML = new Date().getFullYear();
+        </script>
+    </body>
+</html>
